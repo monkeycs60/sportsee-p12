@@ -6,6 +6,7 @@
 ![React](https://img.shields.io/badge/-React-%23282C34?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![D3.js](https://img.shields.io/badge/D3.js-%23F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)
 ![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![JSDoc](https://img.shields.io/badge/documentation-JSDoc-blue)
 
 ![Author](https://img.shields.io/badge/Author-Cl%C3%A9ment%20Serizay-blue?style=for-the-badge)
 ![Repo Size](https://img.shields.io/badge/Repo%20Size-7.2%20MB-blue?style=for-the-badge)
