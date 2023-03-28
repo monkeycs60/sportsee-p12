@@ -13,6 +13,8 @@
 
 This project is focused on developing the user profile page for SportSee, a startup dedicated to sports coaching. This dashboard will allow users to track the several data and stats about activities, performance and nutrition.
 
+Deployed version: [SportSee](https://p12-front-end-sport-see.vercel.app)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Prerequisites](#prerequisites)
