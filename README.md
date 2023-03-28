@@ -60,5 +60,7 @@ The backend runs on port 3050.
     You can access the full documentation of the project [here](
         ./P12-front-end-SportSee/docs/global.html
     ).
+    
+    You can display the documentation locally with live server.
 
 
