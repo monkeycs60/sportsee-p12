@@ -1,0 +1,18 @@
+{
+  "name": "sportsee-p12",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-backend": "cd P9-back-end-dashboard && npx nodemon app/index.js",
+    "start-frontend": "cd P12-front-end-SportSee && npx react-scripts start",
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
