@@ -30,7 +30,7 @@ Deployed version: [SportSee](https://p12-front-end-sport-see.vercel.app)
     ```bash
     npm install
     ```
-The backend runs on port 3050.
+The backend runs on port 3050
 
 - Frontend installation:
     ```bash
