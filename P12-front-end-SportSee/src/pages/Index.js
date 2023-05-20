@@ -68,7 +68,7 @@ A hook that fetches data from the API when the component mounts.
     setDataUserAverageSession(dataFromBackAverageSession);
     setDataUserPerformance(dataFromBackPerformance);
 
-    // Set mocked data from data.js
+    // Set mocked data from data.js file
     // setDataUser(USER_MAIN_DATA);
     // setDataUserScore(USER_MAIN_DATA);
     // setDataUserActivity(USER_ACTIVITY);
