@@ -13,6 +13,8 @@ import PropTypes from 'prop-types';
 
 const RadialChart = ({ dataUserScore }) => {
   const svgRef = useRef(null);
+  console.log('dataUserScore', dataUserScore);
+ 
   
 
   useEffect(() => {

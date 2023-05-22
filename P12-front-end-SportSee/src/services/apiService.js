@@ -5,6 +5,7 @@ import { reformatePerformance, PerformanceData } from "../models/userPerformance
 import { reformateActivity, ActivityData } from "../models/userActivityModel";
 import { reformateAverageSession, SessionData } from "../models/userAverageSessionModel";
 
+
 const api = axios.create({
   baseURL: "http://localhost:3050",
 });

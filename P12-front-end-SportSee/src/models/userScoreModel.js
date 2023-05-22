@@ -1,5 +1,5 @@
 export function reformateUserScore(data) {
-  const score = data.score;
+  const score = data.score || data.todayScore;
 
   return {
     score,

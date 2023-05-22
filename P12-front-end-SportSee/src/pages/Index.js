@@ -7,25 +7,13 @@ It fetches data from the API and displays it using various charts and components
 
 import styled from "styled-components";
 import IndexGreetings from "../components/IndexGreetings";
-import {
-  getDataUser,
-  getDataUserActivity,
-  getDataUserAverageSession,
-  getDataUserPerformance,
-  getDataUserScore
-} from "../services/apiService";
 import { useState, useEffect } from "react";
 import BarChart from "../components/charts/BarChart";
 import LineChart from "../components/charts/LineChart";
 import RadialChart from "../components/charts/RadialChart";
 import RadarChart from "../components/charts/RadarChart";
 import Nutriments from "../components/nutriments/Nutriments";
-import {
-  USER_MAIN_DATA,
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_PERFORMANCE
-} from "../data/data"
+import { fetchAPI, fetchMock } from "../utils/fetchData";
 
 /**
 Index component that renders the main dashboard page.
@@ -33,6 +21,9 @@ It fetches data from the API and displays it using various charts and components
 @component
 */
 const Index = () => {
+  // Set to true to use mocked data instead of fetching from the API
+  const useMockData = false;
+
   const [dataUser, setDataUser] = useState(null);
   const [dataUserActivity, setDataUserActivity] = useState(null);
   const [dataUserAverageSession, setDataUserAverageSession] = useState(null);
@@ -47,19 +38,13 @@ A hook that fetches data from the API when the component mounts.
    useEffect(() => {
  async function fetchData() {
   try {
-    const [
+    const {
       dataFromBack,
       dataFromBackScore,
       dataFromBackActivity,
       dataFromBackAverageSession,
       dataFromBackPerformance,
-    ] = await Promise.all([
-      getDataUser(18),
-      getDataUserScore(18),
-      getDataUserActivity(18),
-      getDataUserAverageSession(18),
-      getDataUserPerformance(18),
-    ]);
+    } = useMockData ? fetchMock() : await fetchAPI();
 
     // Set data from back
     setDataUser(dataFromBack);
@@ -67,13 +52,6 @@ A hook that fetches data from the API when the component mounts.
     setDataUserActivity(dataFromBackActivity);
     setDataUserAverageSession(dataFromBackAverageSession);
     setDataUserPerformance(dataFromBackPerformance);
-
-    // Set mocked data from data.js file
-    // setDataUser(USER_MAIN_DATA);
-    // setDataUserScore(USER_MAIN_DATA);
-    // setDataUserActivity(USER_ACTIVITY);
-    // setDataUserAverageSession(USER_AVERAGE_SESSIONS);
-    // setDataUserPerformance(USER_PERFORMANCE);
 
   } catch (error) {
     alert("Problème lors de la connexion avec la base de données");
